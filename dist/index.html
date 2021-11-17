@@ -4,9 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Weather App</title>
+  <script src="https://kit.fontawesome.com/1722d623e9.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="container">
+    <div class="country-section">
+      <div class="search-place">
+        <input type="text">
+        <button>
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="show-place">
+        <p>here will be selected place:</p>
+        <p id="place"></p>
+        <p id="temp"></p>
+        <p id="weather"></p>
+        <p id="min-max"></p>
+      </div>
+    </div>
+
+    <div class="forecast-section">
+      <h3>forecast-section</h3>
+    </div>
+  </div>
   <script src="bundle.js"></script>
 </body>
 </html>

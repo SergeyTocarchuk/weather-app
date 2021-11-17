@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.country-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid red;
+  margin: 10px;
+}
+
+.forecast-section {
+  border: 1px solid green;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: white;
+}
+
+.fa-search {
+  border: none;
+  font-size: 14px;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid black;
+}
