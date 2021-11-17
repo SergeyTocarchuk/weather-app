@@ -16,12 +16,12 @@ function showWeather() {
   .then(function(response) {
     console.log(response);
     place.innerHTML = `
-    <span>${response.list[0].name}</span>
+    <span class="place">${response.list[0].name}</span>
+    <br>
+    <span class="current-temp">${Math.floor(response.list[0].main.temp)} °</span>
     <br>
     <span>${response.list[0].weather[0].description}</span>
     <br>
-    <span>${response.list[0].main.temp} C</span>
-    <br>
-    <span>min: ${response.list[0].main.temp_min} C, max: ${response.list[0].main.temp_max} C</span>`;
+    <span>min: ${Math.floor(response.list[0].main.temp_min)} °, max: ${Math.floor(response.list[0].main.temp_max)} °</span>`;
   })
 }

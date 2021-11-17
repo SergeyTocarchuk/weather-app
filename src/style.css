@@ -36,3 +36,11 @@ input {
   border: none;
   border-bottom: 2px solid black;
 }
+
+.place {
+  font-size: 22px;
+}
+
+.current-temp {
+  font-size: 30px;
+}
