@@ -37,10 +37,26 @@ input {
   border-bottom: 2px solid black;
 }
 
+/* show current weather section */
+
+.cur-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .place {
   font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.weather-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .current-temp {
-  font-size: 30px;
+  font-size: 60px;
+  margin-bottom: 5px;
 }

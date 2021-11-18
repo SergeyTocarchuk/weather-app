@@ -1,11 +1,19 @@
 import _ from 'lodash';
 import './style.css';
 
-const place = document.querySelector('.show-place');
-const selectedPlaceInput = document.getElementById('search-place');
+const currWeather = document.querySelector('.cur-weather');
 
 const searchPlaceBtn = document.getElementById('search');
 searchPlaceBtn.addEventListener('click', showWeather);
+
+const selectedPlaceInput = document.getElementById('search-place');
+selectedPlaceInput.addEventListener('keypress', handleSearchInput);
+
+function handleSearchInput(e) {
+  if (e.key === 'Enter') {
+    showWeather();
+  }
+}
 
 function showWeather() {
   let selectedPlace = selectedPlaceInput.value
@@ -15,13 +23,13 @@ function showWeather() {
   })
   .then(function(response) {
     console.log(response);
-    place.innerHTML = `
+    currWeather.innerHTML = `
     <span class="place">${response.list[0].name}</span>
-    <br>
-    <span class="current-temp">${Math.floor(response.list[0].main.temp)} °</span>
-    <br>
+    <div class="weather-img">
+      <span class="current-temp">${Math.floor(response.list[0].main.temp)} °</span>
+      <img src="http://openweathermap.org/img/wn/${response.list[0].weather[0].icon}@2x.png">
+    </div>
     <span>${response.list[0].weather[0].description}</span>
-    <br>
     <span>min: ${Math.floor(response.list[0].main.temp_min)} °, max: ${Math.floor(response.list[0].main.temp_max)} °</span>`;
   })
 }
