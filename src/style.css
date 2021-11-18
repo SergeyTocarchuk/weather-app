@@ -17,10 +17,6 @@
   margin: 10px;
 }
 
-.forecast-section {
-  border: 1px solid green;
-}
-
 button {
   cursor: pointer;
   border: none;
@@ -59,4 +55,23 @@ input {
 .current-temp {
   font-size: 60px;
   margin-bottom: 5px;
+}
+
+/* forecast section */
+
+.forecast-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  border: 1px solid green;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+  border: 1px solid orange;
 }
