@@ -33,8 +33,8 @@ function showWeather() {
         <span class="current-temp">${Math.floor(response.list[0].main.temp)} °</span>
         <img src="http://openweathermap.org/img/wn/${response.list[0].weather[0].icon}@2x.png">
       </div>
-      <span>${response.list[0].weather[0].description}</span>
-      <span>min: ${Math.floor(response.list[0].main.temp_min)} °, max: ${Math.floor(response.list[0].main.temp_max)} °</span>`;
+      <span class="font-color">${response.list[0].weather[0].description}</span>
+      <span class="font-color">min: ${Math.floor(response.list[0].main.temp_min)} °, max: ${Math.floor(response.list[0].main.temp_max)} °</span>`;
   })
   .catch(error => {
     console.error('There has been a problem with selected place:', error);
@@ -52,25 +52,36 @@ function showForecast() {
   .then(function(response) {
     console.log(response);
     forecast.innerHTML = `
-      <span>${convertDateToDay(response.list[0].dt_txt)}</span>
-      <span>${Math.floor(response.list[0].main.temp_max)} °</span>
-      <span>${Math.floor(response.list[4].main.temp_min)} °</span>
-      
-      <span>${convertDateToDay(response.list[8].dt_txt)}</span>
-      <span>${Math.floor(response.list[8].main.temp_max)} °</span>
-      <span>${Math.floor(response.list[12].main.temp_min)} °</span>
-      
-      <span>${convertDateToDay(response.list[16].dt_txt)}</span>
-      <span>${Math.floor(response.list[16].main.temp_max)} °</span>
-      <span>${Math.floor(response.list[20].main.temp_min)} °</span>
-      
-      <span>${convertDateToDay(response.list[24].dt_txt)}</span>
-      <span>${Math.floor(response.list[24].main.temp_max)} °</span>
-      <span>${Math.floor(response.list[28].main.temp_min)} °</span>
-      
-      <span>${convertDateToDay(response.list[32].dt_txt)}</span>
-      <span>${Math.floor(response.list[32].main.temp_max)} °</span>
-      <span>${Math.floor(response.list[36].main.temp_min)} °</span>`;
+      <div class="daily-forecast">
+        <span class="day">${convertDateToDay(response.list[0].dt_txt)}</span>
+        <span class="day-temp">${Math.floor(response.list[0].main.temp_max)} °</span>
+        <span class="night-temp">${Math.floor(response.list[4].main.temp_min)} °</span>
+        <img src="http://openweathermap.org/img/wn/${response.list[4].weather[0].icon}@2x.png">
+      </div>
+      <div class="daily-forecast">
+        <span class="day">${convertDateToDay(response.list[8].dt_txt)}</span>
+        <span class="day-temp">${Math.floor(response.list[8].main.temp_max)} °</span>
+        <span class="night-temp">${Math.floor(response.list[12].main.temp_min)} °</span>
+        <img src="http://openweathermap.org/img/wn/${response.list[12].weather[0].icon}@2x.png">
+      </div>
+      <div class="daily-forecast">
+        <span class="day">${convertDateToDay(response.list[16].dt_txt)}</span>
+        <span class="day-temp">${Math.floor(response.list[16].main.temp_max)} °</span>
+        <span class="night-temp">${Math.floor(response.list[20].main.temp_min)} °</span>
+        <img src="http://openweathermap.org/img/wn/${response.list[20].weather[0].icon}@2x.png">
+      </div>
+      <div class="daily-forecast">
+        <span class="day">${convertDateToDay(response.list[24].dt_txt)}</span>
+        <span class="day-temp">${Math.floor(response.list[24].main.temp_max)} °</span>
+        <span class="night-temp">${Math.floor(response.list[28].main.temp_min)} °</span>
+        <img src="http://openweathermap.org/img/wn/${response.list[28].weather[0].icon}@2x.png">
+      </div>
+      <div class="daily-forecast">
+        <span class="day">${convertDateToDay(response.list[32].dt_txt)}</span>
+        <span class="day-temp">${Math.floor(response.list[32].main.temp_max)} °</span>
+        <span class="night-temp">${Math.floor(response.list[36].main.temp_min)} °</span>
+        <img src="http://openweathermap.org/img/wn/${response.list[36].weather[0].icon}@2x.png">
+      </div>`;
   })
 }
 

@@ -2,35 +2,38 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: #19C3FB;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+  
 }
 
 .country-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: 1px solid red;
   margin: 10px;
 }
 
 button {
   cursor: pointer;
   border: none;
-  background: white;
+  background: #19C3FB;
 }
 
 .fa-search {
   border: none;
   font-size: 14px;
+  color: #E3F4FE;
 }
 
 input {
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #E3F4FE;;
+  background: #19C3FB;
 }
 
 /* show current weather section */
@@ -44,6 +47,7 @@ input {
 .place {
   font-size: 22px;
   margin-bottom: 5px;
+  color: #E3F4FE;
 }
 
 .weather-img {
@@ -55,6 +59,11 @@ input {
 .current-temp {
   font-size: 60px;
   margin-bottom: 5px;
+  color: #E3F4FE;
+}
+
+.font-color {
+  color: #E3F4FE;
 }
 
 /* forecast section */
@@ -64,7 +73,10 @@ input {
   flex-direction: column;
   align-items: center;
   margin: 10px;
-  border: 1px solid green;
+}
+
+h3 {
+  color: #E3F4FE;
 }
 
 .forecast {
@@ -73,5 +85,31 @@ input {
   flex-wrap: wrap;
   justify-content: center;
   margin: 5px;
-  border: 1px solid orange;
+}
+
+.daily-forecast {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.day {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #E3F4FE;
+}
+
+.day-temp {
+  font-size: 30px;
+  color: #E3F4FE;
+}
+
+.night-temp {
+  font-size: 20px;
+  color: #E3F4FE;
+}
+
+.daily-forecast > img {
+  width: 40px;
+  height: 40px;
 }
